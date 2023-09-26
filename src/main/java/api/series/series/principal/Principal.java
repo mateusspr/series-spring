@@ -11,15 +11,11 @@ import java.util.Scanner;
 
 public class Principal {
 
-    private Scanner leitura = new Scanner(System.in);
-
-    private ConsumoApi consumoApi = new ConsumoApi();
-
-    private ConverteDados conversor = new ConverteDados();
-
     private final String ENDERECO = "https://www.omdbapi.com/?t=";
-
     private final String API_KEY = "&apikey=72d7ca45";
+    private Scanner leitura = new Scanner(System.in);
+    private ConsumoApi consumoApi = new ConsumoApi();
+    private ConverteDados conversor = new ConverteDados();
 
     public void exibeMenu() {
         System.out.println("Digite o nome da serie para a busca:");
