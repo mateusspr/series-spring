@@ -65,8 +65,8 @@ public class Principal {
 
         if (episodioBuscado.isPresent()) {
             System.out.println("Episodio encontrado! \n" + episodioBuscado.get().getTitulo() + "\nEsta na Temporada: "
-                                + episodioBuscado.get().getTemporada() + "\nNumero do episodio: " + episodioBuscado.get().getNumeroEpisodio());
-        }else {
+                    + episodioBuscado.get().getTemporada() + "\nNumero do episodio: " + episodioBuscado.get().getNumeroEpisodio());
+        } else {
             System.out.println("Episodio nao encontrado!");
         }
 
@@ -91,7 +91,7 @@ public class Principal {
         Map<Integer, Double> avaliacoesPorTemporada = episodios.stream()
                 .filter(e -> e.getAvaliacao() > 0.0)
                 .collect(Collectors.groupingBy(Episodio::getTemporada,
-                         Collectors.averagingDouble(Episodio::getAvaliacao)));
+                        Collectors.averagingDouble(Episodio::getAvaliacao)));
         System.out.println(avaliacoesPorTemporada);
 
         DoubleSummaryStatistics est = episodios.stream()
